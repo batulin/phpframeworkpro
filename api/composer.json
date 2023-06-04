@@ -1,0 +1,20 @@
+{
+    "name": "root/app",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Framework\\": "framework/"
+        }
+    },
+    "authors": [
+        {
+            "name": "batulin"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "symfony/var-dumper": "6.3.x-dev"
+    }
+}
