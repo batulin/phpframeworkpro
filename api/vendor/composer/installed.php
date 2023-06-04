@@ -10,6 +10,17 @@
         'dev' => true,
     ),
     'versions' => array(
+        'nikic/fast-route' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '34128a32009e1b41c4615bcd7d4c39968931e9ea',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/fast-route',
+            'aliases' => array(
+                0 => '2.0.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
         'root/app' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
