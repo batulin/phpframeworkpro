@@ -12,14 +12,11 @@ class Kernel
     {
         //create dispatcher
         $dispatcher = simpleDispatcher(function (RouteCollector $routeCollector) {
-            $routeCollector->addRoute('GET', '/', function () {
-                $content = '<h1>app</h1>';
-                return new Response($content);
-            });
-            $routeCollector->addRoute('GET', '/posts/{id:\d+}', function ($routeParametrs) {
-                $content = "<h1>this is post {$routeParametrs['id']}</h1>";
-                return new Response($content);
-            });
+            $routes = include BASE_PATH . '/routes/web.php';
+
+            foreach ($routes as $route) {
+                $routeCollector->addRoute(...$route);
+            }
         });
 
         // Dispatch a URI, to obtain the route info
@@ -28,10 +25,12 @@ class Kernel
             $request->getPathInfo(),
         );
 
-        [$status, $handler, $vars] = $routeInfo;
+        [$status, [$controller, $method], $vars] = $routeInfo;
+
+        $response = (new $controller())->$method($vars);
 
         // Call the handler, provided by the route info, in order to create a Response    }
-        return $handler($vars);
+        return $response;
 
     }
 }
