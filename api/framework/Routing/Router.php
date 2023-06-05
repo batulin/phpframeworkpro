@@ -2,6 +2,7 @@
 
 namespace Framework\Routing;
 
+use App\Controller\PostController;
 use FastRoute\Dispatcher;
 use Framework\Http\HttpException;
 use Framework\Http\HttpRequestMethodException;
@@ -17,12 +18,16 @@ class Router implements RouterInterface
         $routeInfo = $this->extractRouteInfo($request);
 
         [$handler, $vars] = $routeInfo;
-        [$controller, $method] = $handler;
 
-        return [[new $controller, $method], $vars];
+        if (is_array($handler)) {
+            [$controller, $method] = $handler;
+            $handler = [new $controller, $method];
+        }
+
+        return [$handler, $vars];
     }
 
-    private function extractRouteInfo(Request $request) {
+    private function extractRouteInfo(Request $request): array {
         //create dispatcher
         $dispatcher = simpleDispatcher(function (RouteCollector $routeCollector) {
             $routes = include BASE_PATH . '/routes/web.php';
@@ -44,9 +49,13 @@ class Router implements RouterInterface
                 return [$routeInfo[1], $routeInfo[2]];
             case Dispatcher::METHOD_NOT_ALLOWED:
                 $allowedMethods = implode(', ', $routeInfo[1]);
-                throw new HttpRequestMethodException("The allowed methods $allowedMethods");
+                $e = new HttpRequestMethodException("The allowed methods $allowedMethods");
+                $e->setStatusCode(405);
+                throw $e;
             default:
-                throw new HttpException("Not found");
+                $e = new HttpException("Not found");
+                $e->setStatusCode(404);
+                throw $e;
         }
     }
 }
