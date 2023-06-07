@@ -2,6 +2,7 @@
 
 namespace Framework\Container;
 
+use Framework\Container\ContainerException;
 use Psr\Container\ContainerInterface;
 
 class Container implements ContainerInterface
@@ -10,6 +11,12 @@ class Container implements ContainerInterface
 
     public function add(string $id, string|object $concrete = null)
     {
+        if (null === $concrete) {
+            if (!class_exists($id)) {
+                throw new ContainerException("service $id not founded");
+            }
+            $concrete = $id;
+        }
         $this->services[$id] = $concrete;
     }
 
@@ -20,6 +27,6 @@ class Container implements ContainerInterface
 
     public function has(string $id): bool
     {
-        // TODO: Implement has() method.
+        return array_key_exists($id, $this->services);
     }
 }

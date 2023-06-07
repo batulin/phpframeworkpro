@@ -2,6 +2,7 @@
 
 namespace Framework\Tests;
 use Framework\Container\Container;
+use Framework\Container\ContainerException;
 use PHPUnit\Framework\TestCase;
 
 class ContainerTest extends TestCase
@@ -14,6 +15,27 @@ class ContainerTest extends TestCase
         $container->add('dependant-class', DependantClass::class);
 
         $this->assertInstanceOf(DependantClass::class, $container->get('dependant-class'));
+    }
+
+    /** @test */
+    public function a_ContainerException_is_thrown_if_a_service_cannot_be_found()
+    {
+        $container = new Container();
+
+        $this->expectException(ContainerException::class);
+
+        $container->add('foobar');
+    }
+
+    /** @test */
+    public function can_check_if_the_container_has_a_service(): void
+    {
+        $container = new Container();
+
+        $container->add('dependant-class', DependantClass::class);
+
+        $this->assertTrue($container->has('dependant-class'));
+        $this->assertFalse($container->has('dependent-class'));
     }
 
 }
