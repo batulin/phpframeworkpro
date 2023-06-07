@@ -19,6 +19,7 @@
       <path value="$PROJECT_DIR$/reserve/5-response/vendor/composer" />
       <path value="$PROJECT_DIR$/reserve/5-response/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/api/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/api/vendor/root/app" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

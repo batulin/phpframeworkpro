@@ -1,0 +1,21 @@
+{
+    "name": "root/app",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "batulin"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "nikic/fast-route": "dev-master"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "6.3.x-dev"
+    }
+}

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44f1962d2c71d33ec9eaf21932f2640b",
+    "content-hash": "7e5e168c5c91782090c500b072c40999",
     "packages": [
         {
             "name": "nikic/fast-route",
@@ -71,6 +71,35 @@
                 "source": "https://github.com/nikic/FastRoute/tree/master"
             },
             "time": "2023-03-16T08:06:25+00:00"
+        },
+        {
+            "name": "root/app",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "framework",
+                "reference": "e3c1630d254f4b3632c6a6d8fa99b0936144b8f6"
+            },
+            "require": {
+                "nikic/fast-route": "dev-master"
+            },
+            "require-dev": {
+                "symfony/var-dumper": "6.3.x-dev"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Framework\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "batulin"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -245,6 +274,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "root/app": 20,
         "symfony/var-dumper": 20
     },
     "prefer-stable": false,

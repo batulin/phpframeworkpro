@@ -13,6 +13,7 @@
       <excludeFolder url="file://$MODULE_DIR$/reserve/5-response/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/reserve/5-response/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/reserve/5-response/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/root/app" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

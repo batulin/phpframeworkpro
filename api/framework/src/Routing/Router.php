@@ -2,12 +2,11 @@
 
 namespace Framework\Routing;
 
-use App\Controller\PostController;
 use FastRoute\Dispatcher;
+use FastRoute\RouteCollector;
 use Framework\Http\HttpException;
 use Framework\Http\HttpRequestMethodException;
 use Framework\Http\Request;
-use FastRoute\RouteCollector;
 use function FastRoute\simpleDispatcher;
 
 class Router implements RouterInterface

@@ -70,6 +70,38 @@
             "install-path": "../nikic/fast-route"
         },
         {
+            "name": "root/app",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "framework",
+                "reference": "e3c1630d254f4b3632c6a6d8fa99b0936144b8f6"
+            },
+            "require": {
+                "nikic/fast-route": "dev-master"
+            },
+            "require-dev": {
+                "symfony/var-dumper": "6.3.x-dev"
+            },
+            "type": "project",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Framework\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "batulin"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../root/app"
+        },
+        {
             "name": "symfony/polyfill-mbstring",
             "version": "dev-main",
             "version_normalized": "dev-main",

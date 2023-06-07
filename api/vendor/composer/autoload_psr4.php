@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
-    'Framework\\' => array($baseDir . '/framework'),
+    'Framework\\' => array($vendorDir . '/root/app/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
     'App\\' => array($baseDir . '/src'),
 );

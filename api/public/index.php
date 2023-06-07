@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use Framework\Http\Kernel;
 use Framework\Http\Request;
-use Framework\Http\Response;
 use Framework\Routing\Router;
 
 define('BASE_PATH', dirname(__DIR__));
