@@ -12,15 +12,11 @@ require_once BASE_PATH . '/vendor/autoload.php';
 
 $container = require BASE_PATH . '/config/services.php';
 
-dd($container);
-
 //request received
 $request = Request::createFromGlobals();
 
-$router = new Router();
-
 //perform some logic
-$kernel = new Kernel($router);
+$kernel = $container->get(Kernel::class);
 $response = $kernel->handle($request);
 
 //send response (string of content)

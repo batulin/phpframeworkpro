@@ -4,10 +4,11 @@ namespace Framework\Http;
 
 use Exception;
 use Framework\Routing\Router;
+use Framework\Routing\RouterInterface;
 
 class Kernel
 {
-    public function __construct(private Router $router)
+    public function __construct(private RouterInterface $router)
     {
     }
 
