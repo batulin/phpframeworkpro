@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit4da059ad465509d073572c8f6a7bdf64
+class ComposerStaticInit4e7dd2bffa6439b05e50072635895368
 {
     public static $files = array (
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
@@ -17,6 +17,14 @@ class ComposerStaticInit4da059ad465509d073572c8f6a7bdf64
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\VarDumper\\' => 28,
+        ),
+        'P' => 
+        array (
+            'Psr\\Container\\' => 14,
+        ),
+        'L' => 
+        array (
+            'League\\Container\\' => 17,
         ),
         'F' => 
         array (
@@ -38,9 +46,17 @@ class ComposerStaticInit4da059ad465509d073572c8f6a7bdf64
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
         ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'League\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/container/src',
+        ),
         'Framework\\' => 
         array (
-            0 => __DIR__ . '/..' . '/root/app/src',
+            0 => __DIR__ . '/..' . '/garyclarketech/php-framework-pro/src',
         ),
         'FastRoute\\' => 
         array (
@@ -59,9 +75,9 @@ class ComposerStaticInit4da059ad465509d073572c8f6a7bdf64
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit4da059ad465509d073572c8f6a7bdf64::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit4da059ad465509d073572c8f6a7bdf64::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit4da059ad465509d073572c8f6a7bdf64::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4e7dd2bffa6439b05e50072635895368::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4e7dd2bffa6439b05e50072635895368::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit4e7dd2bffa6439b05e50072635895368::$classMap;
 
         }, null, ClassLoader::class);
     }

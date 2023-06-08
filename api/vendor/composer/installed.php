@@ -19,6 +19,24 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'garyclarketech/php-framework-pro' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '2d6f6b9225eb0346c1100a45cec23d9a8fdcfc97',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../garyclarketech/php-framework-pro',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'league/container' => array(
+            'pretty_version' => '4.x-dev',
+            'version' => '4.9999999.9999999.9999999-dev',
+            'reference' => '388e992884ab75632d93dbaf4d29ec024d64b964',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../league/container',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'nikic/fast-route' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
@@ -30,14 +48,28 @@
             ),
             'dev_requirement' => false,
         ),
-        'root/app' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => 'e3c1630d254f4b3632c6a6d8fa99b0936144b8f6',
-            'type' => 'project',
-            'install_path' => __DIR__ . '/../root/app',
-            'aliases' => array(),
+        'orno/di' => array(
             'dev_requirement' => false,
+            'replaced' => array(
+                0 => '~2.0',
+            ),
+        ),
+        'psr/container' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '90db7b9ac2a2c5b849fcb69dde58f3ae182c68f5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/container',
+            'aliases' => array(
+                0 => '2.0.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
+        'psr/container-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '^1.0',
+            ),
         ),
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => 'dev-main',

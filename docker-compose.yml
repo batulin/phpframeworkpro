@@ -19,10 +19,10 @@ services:
         environment:
             PHP_IDE_CONFIG: serverName=API
 
-    api-php-cli1:
+    api-php-cli:
         build:
             context: docker
-            dockerfile: development/php-cli1/Dockerfile
+            dockerfile: development/php-cli/Dockerfile
         volumes:
             - ./api:/app
 

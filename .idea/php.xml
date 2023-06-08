@@ -20,6 +20,9 @@
       <path value="$PROJECT_DIR$/reserve/5-response/vendor/symfony/polyfill-mbstring" />
       <path value="$PROJECT_DIR$/api/vendor/nikic/fast-route" />
       <path value="$PROJECT_DIR$/api/vendor/root/app" />
+      <path value="$PROJECT_DIR$/api/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/api/vendor/league/container" />
+      <path value="$PROJECT_DIR$/api/vendor/garyclarketech/php-framework-pro" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

@@ -8,9 +8,8 @@ class DependantClass
     {
     }
 
-    public function getDependeny(): DependencyClass
+    public function getDependency(): DependencyClass
     {
         return $this->dependency;
     }
-
 }

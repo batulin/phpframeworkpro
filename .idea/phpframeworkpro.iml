@@ -14,6 +14,9 @@
       <excludeFolder url="file://$MODULE_DIR$/reserve/5-response/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/reserve/5-response/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/root/app" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/garyclarketech/php-framework-pro" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/league/container" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/container" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

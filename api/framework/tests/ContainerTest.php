@@ -37,16 +37,18 @@ class ContainerTest extends TestCase
         $this->assertTrue($container->has('dependant-class'));
         $this->assertFalse($container->has('dependent-class'));
     }
+
     /** @test */
-    public function service_can_be_recursively_autowired()
+    public function services_can_be_recursively_autowired()
     {
         $container = new Container();
 
-        $container->add('dependant-service', DependantClass::class);
+        $dependantService = $container->get(DependantClass::class);
 
-        $dependantService = $container->get('dependant-service');
+        $dependancyService = $dependantService->getDependency();
 
-        $this->assertInstanceOf(DependencyClass::class, $dependantService->getDependency());
+        $this->assertInstanceOf(DependencyClass::class, $dependancyService);
+        $this->assertInstanceOf(SubDependencyClass::class, $dependancyService->getSubDependency());
     }
 
 }
