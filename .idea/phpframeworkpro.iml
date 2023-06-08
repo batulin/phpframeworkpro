@@ -17,6 +17,7 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/garyclarketech/php-framework-pro" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/league/container" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/dotenv" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

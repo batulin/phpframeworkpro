@@ -23,6 +23,7 @@
       <path value="$PROJECT_DIR$/api/vendor/psr/container" />
       <path value="$PROJECT_DIR$/api/vendor/league/container" />
       <path value="$PROJECT_DIR$/api/vendor/garyclarketech/php-framework-pro" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/dotenv" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

@@ -12,12 +12,13 @@
             "dist": {
                 "type": "path",
                 "url": "framework",
-                "reference": "2d6f6b9225eb0346c1100a45cec23d9a8fdcfc97"
+                "reference": "d6eddabbe4c12c9c0fcc3357801070aa65cc6782"
             },
             "require": {
                 "league/container": "^4.0.0",
                 "nikic/fast-route": "dev-master",
-                "psr/container": "2.0.x-dev"
+                "psr/container": "2.0.x-dev",
+                "symfony/dotenv": "^6.0"
             },
             "require-dev": {
                 "symfony/var-dumper": "6.3.x-dev"
@@ -244,6 +245,80 @@
                 "source": "https://github.com/php-fig/container/tree/master"
             },
             "time": "2022-07-19T17:36:59+00:00"
+        },
+        {
+            "name": "symfony/dotenv",
+            "version": "6.4.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dotenv.git",
+                "reference": "32bd511f6f6ab49e8d77ce358d2af13dd8a631dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/32bd511f6f6ab49e8d77ce358d2af13dd8a631dc",
+                "reference": "32bd511f6f6ab49e8d77ce358d2af13dd8a631dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "conflict": {
+                "symfony/console": "<5.4",
+                "symfony/process": "<5.4"
+            },
+            "require-dev": {
+                "symfony/console": "^5.4|^6.0|^7.0",
+                "symfony/process": "^5.4|^6.0|^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Dotenv\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Registers environment variables from a .env file",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "dotenv",
+                "env",
+                "environment"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/dotenv/tree/6.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-05-23T16:34:37+00:00"
         }
     ],
     "packages-dev": [

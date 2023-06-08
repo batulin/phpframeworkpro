@@ -22,7 +22,7 @@
         'garyclarketech/php-framework-pro' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2d6f6b9225eb0346c1100a45cec23d9a8fdcfc97',
+            'reference' => 'd6eddabbe4c12c9c0fcc3357801070aa65cc6782',
             'type' => 'library',
             'install_path' => __DIR__ . '/../garyclarketech/php-framework-pro',
             'aliases' => array(),
@@ -70,6 +70,15 @@
             'provided' => array(
                 0 => '^1.0',
             ),
+        ),
+        'symfony/dotenv' => array(
+            'pretty_version' => '6.4.x-dev',
+            'version' => '6.4.9999999.9999999-dev',
+            'reference' => '32bd511f6f6ab49e8d77ce358d2af13dd8a631dc',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/dotenv',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => 'dev-main',
