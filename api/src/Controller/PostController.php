@@ -14,4 +14,9 @@ class PostController extends AbstractController
         ]);
     }
 
+    public function create(): Response
+    {
+        return $this->render('create-post.html.twig');
+    }
+
 }
