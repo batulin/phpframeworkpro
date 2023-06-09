@@ -15,7 +15,7 @@ abstract class AbstractController
 
     }
 
-    public function render(string $template, array $parametrs, Response $response = null): Response
+    public function render(string $template, array $parametrs = [], Response $response = null): Response
     {
         $content = $this->container->get('twig')->render($template, $parametrs);
 

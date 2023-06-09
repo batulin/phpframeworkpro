@@ -15,9 +15,8 @@ class HomeController extends AbstractController
 
     public function index(): Response
     {
-        $template = "<h1>controller{{ name }}</h1>";
-        return $this->render($template, [
-            'name' => $this->widget->name
+        return $this->render('home.html.twig', [
+            "name" => $this->widget->name
         ]);
     }
 
