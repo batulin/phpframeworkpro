@@ -24,6 +24,8 @@
       <path value="$PROJECT_DIR$/api/vendor/league/container" />
       <path value="$PROJECT_DIR$/api/vendor/garyclarketech/php-framework-pro" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/api/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-ctype" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

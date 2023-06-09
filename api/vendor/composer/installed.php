@@ -22,7 +22,7 @@
         'garyclarketech/php-framework-pro' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'd6eddabbe4c12c9c0fcc3357801070aa65cc6782',
+            'reference' => '0fe49165200f56cbc5a3cd5713d8262f73c43b9d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../garyclarketech/php-framework-pro',
             'aliases' => array(),
@@ -80,6 +80,17 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'symfony/polyfill-ctype' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'ea208ce43cbb04af6867b4fdddb1bdbf84cc28cb',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-ctype',
+            'aliases' => array(
+                0 => '1.28.x-dev',
+            ),
+            'dev_requirement' => false,
+        ),
         'symfony/polyfill-mbstring' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
@@ -89,7 +100,7 @@
             'aliases' => array(
                 0 => '1.28.x-dev',
             ),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'symfony/var-dumper' => array(
             'pretty_version' => '6.3.x-dev',
@@ -99,6 +110,15 @@
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'twig/twig' => array(
+            'pretty_version' => '3.x-dev',
+            'version' => '3.9999999.9999999.9999999-dev',
+            'reference' => '7e7d5839d4bec168dfeef0ac66d5c5a2edbabffd',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twig/twig',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
     ),
 );

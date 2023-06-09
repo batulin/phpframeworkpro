@@ -23,7 +23,6 @@ class Kernel
     {
         try {
 
-            throw new Exception('Kernel exception');
 
             [$routeHandler, $vars] = $this->router->dispatch($request, $this->container);
 
