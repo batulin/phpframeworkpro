@@ -22,8 +22,6 @@ class Kernel
         // Run the console application, returning a status code
         $status = $this->application->run();
 
-        dd($status);
-
         // return the status code
         return $status;
     }
