@@ -17,4 +17,9 @@ class Response
     {
         echo $this->content;
     }
+
+    public function setContent(?string $content): void
+    {
+        $this->content = $content;
+    }
 }
