@@ -2,6 +2,7 @@
 
 namespace Framework\Http;
 
+use Doctrine\DBAL\Connection;
 use Exception;
 use Framework\Routing\Router;
 use Framework\Routing\RouterInterface;
@@ -23,6 +24,7 @@ class Kernel
     {
         try {
 
+            dd($this->container->get(Connection::class));
 
             [$routeHandler, $vars] = $this->router->dispatch($request, $this->container);
 
