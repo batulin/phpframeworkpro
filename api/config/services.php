@@ -61,6 +61,9 @@ $container->addShared(\Doctrine\DBAL\Connection::class, function () use ($contai
 });
 
 $container->add('database:migrations:migrate', \Framework\Console\Command\MigrateDatabase::class)
-    ->addArgument(\Doctrine\DBAL\Connection::class);
+    ->addArguments([
+        \Doctrine\DBAL\Connection::class,
+        new \League\Container\Argument\Literal\StringArgument(BASE_PATH . '/migrations')
+    ]);
 
 return $container;

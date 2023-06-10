@@ -10,7 +10,10 @@ class MigrateDatabase implements CommandInterface
 {
     private string $name = 'database:migrations:migrate';
 
-    public function __construct(private Connection $connection)
+    public function __construct(
+        private Connection $connection,
+        private string $migrationsPath
+    )
     {
     }
 
@@ -27,8 +30,10 @@ class MigrateDatabase implements CommandInterface
             $appliedMigrations = $this->getAppliedMigrations();
 
             // Get the $migrationFiles from the migrations folder
+            $migrationFiles = $this->getMigrationFiles();
 
             // Get the migrations to apply. i.e. they are in $migrationFiles but not in $appliedMigrations
+            $migrationsToAply = array_diff($migrationFiles, $appliedMigrations);
 
             // Create SQL for any migrations which have not been run ..i.e. which are not in the database
 
@@ -47,13 +52,23 @@ class MigrateDatabase implements CommandInterface
         }
     }
 
+    private function getMigrationFiles(): array
+    {
+        $migrationFiles = scandir($this->migrationsPath);
+
+        $filteredFiles = array_filter($migrationFiles, function ($file) {
+            return  !in_array($file, ['.', '..']);
+        });
+
+        return $filteredFiles;
+    }
+
     private function getAppliedMigrations(): array
     {
         $sql = "SELECT migration FROM migrations;";
 
         $appliedMigrations = $this->connection->executeQuery($sql)->fetchFirstColumn();
 
-        dd($appliedMigrations);
         return $appliedMigrations;
     }
 
