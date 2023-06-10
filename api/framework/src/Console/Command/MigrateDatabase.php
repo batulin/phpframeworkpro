@@ -52,6 +52,12 @@ class MigrateDatabase implements CommandInterface
 
 
             // Execute the SQL query
+            $sqlArray = $schema->toSql($this->connection->getDatabasePlatform());
+
+            foreach ($sqlArray as $sql) {
+                $this->connection->executeQuery($sql);
+            }
+
             $this->connection->commit();
 
             return 0;
@@ -108,6 +114,7 @@ class MigrateDatabase implements CommandInterface
             $table->setPrimaryKey(['id']);
 
             $sqlArray = $schema->toSql($this->connection->getDatabasePlatform());
+
             $this->connection->executeQuery($sqlArray[0]);
 
             echo 'table migrations created';
