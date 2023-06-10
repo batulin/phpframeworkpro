@@ -24,6 +24,7 @@ class MigrateDatabase implements CommandInterface
             $this->connection->beginTransaction();
 
             // Get $appliedMigrations which are already in the database.migrations table
+            $appliedMigrations = $this->getAppliedMigrations();
 
             // Get the $migrationFiles from the migrations folder
 
@@ -44,6 +45,16 @@ class MigrateDatabase implements CommandInterface
 
             throw $throwable;
         }
+    }
+
+    private function getAppliedMigrations(): array
+    {
+        $sql = "SELECT migration FROM migrations;";
+
+        $appliedMigrations = $this->connection->executeQuery($sql)->fetchFirstColumn();
+
+        dd($appliedMigrations);
+        return $appliedMigrations;
     }
 
     private function createMigrationsTable(): void
