@@ -60,4 +60,7 @@ $container->addShared(\Doctrine\DBAL\Connection::class, function () use ($contai
     return $container->get(\Framework\Dbal\ConnectionFactory::class)->create();
 });
 
+$container->add('database:migrations:migrate', \Framework\Console\Command\MigrateDatabase::class)
+    ->addArgument(\Doctrine\DBAL\Connection::class);
+
 return $container;

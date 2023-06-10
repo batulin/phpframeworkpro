@@ -47,7 +47,7 @@ class Application
             }
         }
 
-        return $options;
+        return $ootions;
 
     }
 }
